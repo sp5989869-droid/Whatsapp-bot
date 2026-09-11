@@ -10,8 +10,12 @@ app.post("/webhook", (req, res) => {
   console.log("Mensagem recebida:", mensagem);
 
   res.status(200);
-  res.type("text/xml");
-  res.send(`
+  res.set("Content-Type", "text/xml");
+res.send(`
+<Response>
+  <Message>Olá! Recebi a sua mensagem. 🤖</Message>
+</Response>
+`);
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
       <Message>Olá! Recebi a sua mensagem. 🤖</Message>
