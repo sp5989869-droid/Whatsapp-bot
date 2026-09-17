@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bac Bo Screen Bot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>🎲 Bac Bo Screen Bot</h1>
+<p id="status">Estado: parado</p>
+<button id="start">▶️ Iniciar captura</button>
+<button id="stop" disabled>⏹️ Parar captura</button>
+<video id="preview" autoplay muted playsinline></video>
+<h2>Última leitura</h2>
+<pre id="ocr">Ainda não há leitura.</pre>
+<h2>Histórico</h2>
+<div id="history">Nenhuma rodada registada.</div>
+<p class="warning">Protótipo: OCR experimental. Não garante previsões ou resultados futuros.</p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
